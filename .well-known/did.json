@@ -1,0 +1,48 @@
+{
+    "id": "did:web:sasswagon.com",
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      {
+        "@base": "did:web:sasswagon.com"
+      }
+    ],
+    "service": [
+      {
+        "id": "#linkeddomains",
+        "type": "LinkedDomains",
+        "serviceEndpoint": {
+          "origins": [
+            "https://sasswagon.com/"
+          ]
+        }
+      },
+      {
+        "id": "#hub",
+        "type": "IdentityHub",
+        "serviceEndpoint": {
+          "instances": [
+            "https://hub.did.msidentity.com/v1.0/e5e3c314-a26a-4be3-83ef-e3a4ca51fa14"
+          ]
+        }
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#cb1ff4faf37f4449877d195bfa97a397vcSigningKey-e1817",
+        "controller": "did:web:sasswagon.com",
+        "type": "EcdsaSecp256k1VerificationKey2019",
+        "publicKeyJwk": {
+          "crv": "secp256k1",
+          "kty": "EC",
+          "x": "rhzOT59XYZRTmoIT_WEGuO631jRUuho3CA7m2YVU1Zg",
+          "y": "DebINLRZX9huDqhOvzoPKyDGsYppvhN1RrAwlALCrFQ"
+        }
+      }
+    ],
+    "authentication": [
+      "#cb1ff4faf37f4449877d195bfa97a397vcSigningKey-e1817"
+    ],
+    "assertionMethod": [
+      "#cb1ff4faf37f4449877d195bfa97a397vcSigningKey-e1817"
+    ]
+  }
